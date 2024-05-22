@@ -1,0 +1,13 @@
+function marsExploration(s) {
+    const sos = "SOS";
+    return s.split("").reduce((prev, curr, currIndex) => {
+        if (curr !== sos[currIndex % sos.length]) {
+            prev += 1;
+        }
+
+        return prev;
+    }, 0);
+}
+
+
+============================================================
