@@ -79,3 +79,23 @@ function jimOrders(orders) {
 }
 
 =============================================================================
+
+function toys(w) {
+    // Write your code here
+    let sorted = w.sort((a,b) => a-b);
+    let container = 1, max_weight= w[0] + 4;
+    
+    for(let weight of sorted){
+        if(weight<=max_weight){
+            continue
+        }
+        container+=1;
+        max_weight = weight+4;
+    }
+    
+    
+    return container;
+}
+
+==================================================================================
+
