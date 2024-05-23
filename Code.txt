@@ -59,3 +59,23 @@ function minimumAbsoluteDifference(arr) {
 }
 
 ==================================================================================
+
+function jimOrders(orders) {
+    // Write your code here
+
+    let res = {};
+    
+    for(let i = 0; i<orders.length; i++){
+        let sum=0;
+        for(let j =0; j< orders[i].length; j++){
+            sum+=orders[i][j];
+        }
+        res[i+1]=sum;
+    }
+    
+    let sorted = Object.keys(res).sort((a,b) => res[a] - res[b]);
+    return sorted;
+
+}
+
+=============================================================================
