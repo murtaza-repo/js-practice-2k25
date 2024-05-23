@@ -99,3 +99,20 @@ function toys(w) {
 
 ==================================================================================
 
+function lonelyinteger(a) {
+    // Write your code here
+    let res = [];
+    
+    a.forEach(n => {
+        if(res.includes(n)){
+            let index = res.findIndex(ele => ele === n);
+            res.splice(index, 1);
+        }else{
+            res.push(n)
+        }
+    })
+    
+    return res;
+}
+
+==================================================================================
