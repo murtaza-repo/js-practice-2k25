@@ -33,3 +33,29 @@ function balancedSums(arr) {
 }
 
 ===========================================================
+
+function minimumAbsoluteDifference(arr) {
+    // Write your code here
+    
+    if (arr.length < 2) {
+        return 0; // No difference possible if there are fewer than 2 elements
+    }
+
+    // Sort the array first
+    arr.sort((a, b) => a - b);
+
+    // Initialize the minimum difference to a large number
+    let minDiff = Infinity;
+
+    // Iterate through the array and find the minimum difference
+    for (let i = 0; i < arr.length - 1; i++) {
+        let diff = Math.abs(arr[i] - arr[i + 1]);
+        if (diff < minDiff) {
+            minDiff = diff;
+        }
+    }
+
+    return minDiff;
+}
+
+==================================================================================
