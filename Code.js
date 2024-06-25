@@ -116,3 +116,26 @@ function lonelyinteger(a) {
 }
 
 ==================================================================================
+
+const countOccur = (str) => {
+let res = [];
+
+for(let s of str){
+    let popped = res.pop();
+    if(popped !== undefined && popped.charAt(0) === s){
+        let nextCount = +popped.substr(1,) + 1;
+        res.push(s + nextCount);
+    } else{
+        if(popped !== undefined){
+            res.push(popped);
+        }
+        res.push(s+1);
+    }
+}
+
+ console.log(res.join(''));
+}
+
+countOccur("qqqyyhhhhaaaavvvvbbb") //count the occurence of each letter in place
+
+=====================================================================================
